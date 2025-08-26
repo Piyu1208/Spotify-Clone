@@ -6,7 +6,7 @@ A static, visual clone of the Spotify web player's user interface, built exclusi
 
 ## Live Demo & Screenshot
 
-**Check out the live version here:** [https://your-username.github.io/spotify-clone/](https://your-username.github.io/spotify-clone/)
+**Check out the live version here:** [https://your-username.github.io/spotify-clone/](https://piyu1208.github.io/Spotify-Clone/)
 
 
 <br>
