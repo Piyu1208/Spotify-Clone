@@ -1,0 +1,774 @@
+
+        .bottom-header {
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          height: 80px;
+          background-color: black;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          z-index: 7;
+        }
+
+        .current-music-pp {
+          height: 55px;
+          width: 55px;
+          border-radius: 5px;
+          
+        }
+
+        .bottom-header p {
+          color: white;
+          font-family: "Seogoe UI", Arial;
+        }
+
+        .bottom-header .top {
+          font-size: 15px;
+          margin-bottom: 0;
+          margin-top: 10px;
+        }
+
+        .bottom-header .top:hover {
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        .bottom-header .bottom {
+          margin-top: 2px;
+          font-size: 13px;
+          color: rgb(169, 169, 169);
+        }
+
+        .bottom-header .bottom:hover {
+          filter: brightness(1.8);
+          text-decoration: underline;
+          cursor: pointer;
+        }
+
+        .current-music-content {
+          margin-bottom: 10px;
+        }
+
+        .btm-left {
+          width: 320px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          margin-left: 20px;
+          flex-shrink: 0;
+        }
+
+        .add-to-like-songs {
+          height: 17px;
+          transition: 0.25 ease-in-out;
+        }
+
+        .add-to-like-container {
+          position: relative;
+        }
+
+        .like-popup {
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: rgb(47, 47, 47);
+          position: absolute;
+          height: 19px;
+          width: 130px;
+          top: -50px;
+          left: -50px;
+          font-family: Arial;
+          font-size: 13px;
+          padding: 5px ;
+          border-radius: 3px;
+          font-weight: 550;
+          opacity: 0;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          
+        }
+
+        .add-to-like-container:hover .like-popup {
+          opacity: 1;
+        }
+
+        .add-to-like-songs:hover {
+          transform: scale(1.1);
+          filter: brightness(10);
+        }
+
+        .tp img {
+          height: 17px;
+        }
+
+        .btm-right {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 330px;
+          margin-right: 10px;
+          flex-shrink: 0;
+        }
+
+        .btm-right img {
+          height: 16px;
+
+        }
+
+        .btm-middle {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          flex-shrink: 0;
+        }
+
+        .btm-middle .tp {
+          display: flex;
+          width: 180px;
+          justify-content: space-between;
+          align-items: center;
+        }
+
+        .play-circle {
+          display: flex;
+          background-color: white;
+          padding: 5px;
+          justify-content: center;
+          vertical-align: center;
+          height: 20px;
+          width: 20px;
+          border-radius: 40px;
+          position: relative;
+          transition: 0.25 ease-in-out;
+          cursor: pointer;
+        }
+
+        .play-circle:hover {
+          transform: scale(1.1);
+          
+        }
+
+        .play-circle:hover .play-popup {
+          opacity: 1;
+        }
+
+        .play-circle img {
+          padding-top: 1.5px;
+        }
+
+        .play-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 40px;
+          font-weight: bold;
+          padding: 3px 0px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -5px;
+          top: -30px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .bt {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          width: 480px;
+          margin-top: -8px;
+        }
+
+        .bt .line {
+          background-color: rgb(81, 81, 81);
+          height: 3px;
+          width: 400px;
+          border-radius: 5px;
+          
+        }
+
+        .bt p {
+          color: gray;
+          font-size: 13px;
+        }
+
+        .bt-line-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+          cursor: pointer;
+        }
+
+        .line-popup {
+          height: 12px;
+          width: 12px;
+          border-radius: 24px;
+          background-color: white;
+          position: absolute;
+          left: -2px;
+          opacity: 0;
+          transition: 0.25 ease-in-out;
+          pointer-events: none;
+        }
+
+        .bt-line-container:hover .line-popup {
+          opacity: 1
+        }
+
+        .tp {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 15px;
+        }
+
+        .shuffle {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        .shuffle-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 110px;
+          font-weight: bold;
+          padding: 4px 0px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -50px;
+          top: -40px;
+          opacity: 0;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+        }
+
+        .shuffle:hover .shuffle-popup {
+          opacity: 1;
+        }
+
+        .shuffle img {
+          transition: 0.25s ease-in-out;
+        }
+
+        .shuffle img:hover{
+          transform: scale(1.1);
+        }
+
+
+        .previous {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        .previous-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 70px;
+          font-weight: bold;
+          padding: 3px 0px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -30px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .previous:hover .previous-popup {
+          opacity: 1;
+        }
+
+        .previous img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .previous img:hover {
+          filter: brightness(1.5);
+          transform: scale(1.1);
+        }
+
+        .next {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        .next-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 50px;
+          font-weight: bold;
+          padding: 3px 0px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -20px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .next:hover .next-popup {
+          opacity: 1;
+        }
+        
+        .next img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .next img:hover {
+          filter: brightness(1.5);
+          transform: scale(1.1);
+        }
+
+        .enable-repeat {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          cursor: pointer;
+        }
+
+        .enable-repeat-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 100px;
+          font-weight: bold;
+          padding: 3px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -40px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .enable-repeat:hover .enable-repeat-popup{
+          opacity: 1;
+        }
+
+        .enable-repeat img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .enable-repeat img:hover {
+          transform: scale(1.1);
+          filter: brightness(1.5);
+        }
+    
+        .vol {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          position: relative;
+          margin-left: 10px;
+        }
+
+        .vol-bar {
+          height: 3px;
+          width: 90px;
+          background-color: white;
+          border-radius: 6px;
+          margin-left: 8px;
+          margin-right: 8px;
+          cursor: pointer;
+        }
+
+
+        .mute {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .mute-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 40px;
+          font-weight: bold;
+          padding: 3px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -20px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .mute:hover .mute-popup{
+          opacity: 1;
+        }
+
+        .mute img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .mute img:hover {
+          transform: scale(1.05);
+          filter: brightness(1.5);
+        }
+
+
+        .vol-bar-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: relative;
+        }
+
+        .vol-popup {
+          height: 12px;
+          width: 12px;
+          border-radius: 24px;
+          background-color: white;
+          position: absolute;
+          right: 6px;
+          opacity: 0;
+          transition: 0.25 ease-in-out;
+        }
+
+        .vol-bar {
+          transition: 0.25 ease-in-out;
+        }
+
+        .vol-bar-container:hover .vol-bar {
+          background-color: rgb(41, 209, 23);
+        }
+
+        .vol-bar-container:hover .vol-popup {
+          opacity: 1;
+        }
+
+      
+
+        .btm-right-left {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 120px;
+        }
+
+
+        .now-playing-view {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .now-playing-view-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 120px;
+          font-weight: bold;
+          padding: 3px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -50px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .now-playing-view:hover .now-playing-view-popup{
+          opacity: 1;
+        }
+
+        .now-playing-view img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .now-playing-view img:hover {
+          transform: scale(1.05);
+          filter: brightness(1.5);
+        }
+
+
+        .lyrics {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .lyrics-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 50px;
+          font-weight: bold;
+          padding: 3px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -20px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .lyrics:hover .lyrics-popup{
+          opacity: 1;
+        }
+
+        .lyrics img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .lyrics img:hover {
+          transform: scale(1.05);
+          filter: brightness(1.5);
+        }
+      
+        
+        .queue {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .queue-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 50px;
+          font-weight: bold;
+          padding: 3px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -20px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .queue:hover .queue-popup{
+          opacity: 1;
+        }
+
+        .queue img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .queue img:hover {
+          transform: scale(1.05);
+          filter: brightness(1.99);
+        }
+
+
+
+        .connect-to-device {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .connect-to-device-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 130px;
+          font-weight: bold;
+          padding: 3px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -60px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .connect-to-device:hover .connect-to-device-popup{
+          opacity: 1;
+        }
+
+        .connect-to-device img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .connect-to-device img:hover {
+          transform: scale(1.05);
+          filter: brightness(1.9);
+        }
+
+
+        .open-miniplayer {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 10px;
+          cursor: pointer;
+        }
+
+        .open-miniplayer-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          top: -50px;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 110px;
+          font-weight: bold;
+          padding: 3px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -60px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .open-miniplayer:hover .open-miniplayer-popup{
+          opacity: 1;
+        }
+
+        .open-miniplayer img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .open-miniplayer img:hover {
+          transform: scale(1.1);
+          filter: brightness(1.9);
+        }
+
+        .enter-fullscreen {
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          cursor: pointer;
+        }
+
+        .enter-fullscreen-popup {
+          color: white;
+          font-family: arial;
+          position: absolute;
+          background-color: rgb(47, 47, 47);
+          height: 19px;
+          width: 120px;
+          font-weight: bold;
+          padding: 3px;
+          border-radius: 3px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          font-size: 13px;
+          left: -120px;
+          top: -40px;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .enter-fullscreen:hover .enter-fullscreen-popup{
+          opacity: 1;
+        }
+
+        .enter-fullscreen img {
+          transition: 0.25 ease-in-out;
+        }
+
+        .enter-fullscreen img:hover {
+          transform: scale(1.05);
+          filter: brightness(2.9);
+        }
+      

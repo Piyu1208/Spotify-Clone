@@ -1,0 +1,452 @@
+        .current-music {
+          background-color: rgb(0, 0, 0);
+          flex: 1.3;
+          margin-left: 3px;
+        }
+
+        .current-music-header:hover .current-music-options {
+          opacity: 1;
+        }
+
+
+
+        .current-music-header {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 20px;
+          background-color: rgb(31, 30, 30);
+          position: fixed;
+          top: 60px;
+          right: 0;
+          
+          z-index: 5;
+          /* box-shadow: 0px 4px 2px -2px rgba(0, 0, 0, 0.5); */
+        }
+
+        .current-music-header:hover {
+          z-index: 7;
+        }
+
+        .current-music-playlist {
+          color: white;
+          font-weight: 700;
+          font-size: 17px;
+        }
+
+        .current-music-playlist:hover {
+          text-decoration: underline;
+        }
+
+
+
+        .current-music-options {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 20px;
+          opacity: 0;
+          transition: 0.25 ease-in-out;
+          margin-left: 69px;
+        }
+
+        .more-options {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 35px;
+          width: 35px;
+          border-radius: 20px;
+          position: relative;
+        }
+
+        .more-options-popup {
+          display: flex;
+          color: white;
+          position: absolute;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(50, 50, 50);
+          width: 250px;
+          border-radius: 5px;
+          padding: 5px;
+          font-size: 13px;
+          top: -20px;
+          left: -150px;
+          font-weight: 700;
+          opacity: 0;
+          transition: 0.25s ease-in-out;
+        }
+
+        .more-options:hover {
+          background-color: rgb(50, 50, 50);
+        }
+
+        .more-options:hover .more-options-popup {
+          opacity: 1;
+        }
+
+
+        .expand-view {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 35px;
+          width: 35px;
+          border-radius: 20px;
+          position: relative;
+        } 
+
+        .expand-view-popup {
+          display: flex;
+          color: white;
+          position: absolute;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(50, 50, 50);
+          width: 170px;
+          border-radius: 5px;
+          padding: 5px;
+          font-size: 13px;
+          top: -20px;
+          left: -120px;
+          font-weight: 700;
+          opacity: 1;
+          transition: 0.25s ease-in-out;
+          opacity: 0;
+        }
+
+        .expand-view:hover {
+          background-color: rgb(50, 50, 50);
+        }
+
+        .expand-view:hover .expand-view-popup {
+          opacity: 1;
+        }
+
+        .current-music-options img {
+          height: 20px;
+          width: 20px;
+        }
+
+        .current-music-photo-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 50px;
+          background-color: rgb(31, 30, 30);
+          padding: 7px 20px 5px;
+        }
+
+
+        .current-music-photo {
+          height: 250px;
+          width: 250px;
+          border-radius: 10px;
+        }
+
+        .title-section {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background-color: rgb(31, 30, 30);
+          padding: 0 20px;
+          position: relative;
+        }
+
+        .title-section:hover .container-container-container {
+          opacity: 1;
+        }
+
+        .title-right-section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          gap: 5px;
+        }
+
+        .container-container-container {
+          opacity: 0;
+          transition: 0.25s ease-in-out;
+        }
+
+        .current-music-copy-link {
+          height: 16px;
+          width: 16px;
+        }
+
+        .current-music-copy-link-container {
+          position: relative;
+        }
+
+        .current-music-copy-link-popup {
+          display: flex;
+          color: white;
+          position: absolute;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(50, 50, 50);
+          width: 120px;
+          font-size: 13px;
+          font-weight: 600;
+          padding: 4px;
+          border-radius: 2px;
+          top: -35px;
+          left: -70px;
+          opacity: 0;
+          transition: 0.25s ease-in-out;
+        }
+
+        .current-music-copy-link-container:hover .current-music-copy-link-popup {
+          opacity: 1;
+        }
+
+        .current-music-like {
+          height: 16px;
+          width: 16px;
+        }
+
+        .current-music-like-container {
+          position: relative;
+        }
+
+        .current-music-like-popup {
+          display: flex;
+          color: white;
+          position: absolute;
+          justify-content: center;
+          align-items: center;
+          background-color: rgb(50, 50, 50);
+          width: 100px;
+          font-size: 13px;
+          font-weight: 600;
+          padding: 4px;
+          border-radius: 2px;
+          top: -35px;
+          left: -75px;
+          opacity: 0;
+          transition: 0.25s ease-in-out;
+        }
+
+        .current-music-like-container:hover .current-music-like-popup {
+          opacity: 1;
+        }
+
+        .title-left-section {
+          display: flex;
+          flex-direction: column;
+          
+        }
+
+        .current-music-title {
+          color: white;
+          font-size: 20px;
+          font-weight: 700;
+          margin-top: 12px;
+          margin-bottom: 3px;
+        }
+
+        .current-music-title:hover {
+          text-decoration: underline;
+        }
+
+        .current-music-artist {
+          color: rgb(175, 175, 175);
+          font-size: 16px;
+          font-weight: 700;
+          margin-top: 0;
+        }
+
+        .current-music-artist:hover {
+          text-decoration: underline;
+        }
+
+        .credits-section {
+          color: white;
+          background-color: rgb(31, 30, 30);
+          margin: 12px;
+          padding: 10px;
+          border-radius: 10px;
+        }
+
+        .credits-section-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 7px;
+          padding-right: 7px;
+        }
+
+        .credits-text {
+          font-weight: 700;
+        }
+
+        .showall-text {
+          color: rgb(175, 175, 175);
+          font-weight: 600;
+          font-size: 14px;
+          
+        }
+
+        .showall-text:hover {
+          text-decoration: underline;
+          cursor: pointer;
+          transform: scale(1.05);
+          filter: brightness(1.5);
+        }
+
+        .credits-section-middle {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 7px;
+          padding-right: 7px;
+          gap: 20px;
+        }
+
+        .middle-coffee-beans {
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+
+        .middle-coffee-beans:hover {
+          text-decoration: underline;
+        }
+
+        .coffee-beans-title {
+          color: rgb(175, 175, 175);
+          font-weight: 600;
+          font-size: 14px;
+          margin-top: 5px;
+        }
+
+        .middle-right button {
+          color: white;
+          font-weight: 600;
+          background-color: rgb(31, 30, 30);
+          border: solid;
+          padding: 7px 17px;
+          border-radius: 15px;
+          border-color: rgb(175, 175, 175);
+          border-width: 0.5px;
+        }
+
+        .middle-right button:hover {
+          transform: scale(1.05);
+          border-color: white;
+        }
+
+        .credits-section-bottom {
+          padding-left: 7px;
+          padding-right: 7px;
+          margin-top: 10px;
+        }
+
+        .composer-name {
+          font-weight: 500;
+          margin-bottom: 0;
+        }
+
+        .composer {
+          color: rgb(175, 175, 175);
+          font-weight: 600;
+          font-size: 14px;
+          margin-top: 5px;
+        }
+
+        .next-section {
+          background-color: rgb(31, 30, 30);
+          color: white;
+          margin: 12px;
+          padding: 10px;
+          border-radius: 10px;
+          margin-bottom: 30px;
+        }
+
+        .next-section-top {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding-left: 7px;
+          padding-right: 7px;
+        }
+
+        .next-in-q-text {
+          font-weight: 700;
+        }
+
+        .open-q-text {
+          color: rgb(175, 175, 175);
+          font-weight: 600;
+          font-size: 14px;
+        }
+
+        .open-q-text:hover {
+          text-decoration: underline;
+          cursor: pointer;
+          transform: scale(1.05);
+          filter: brightness(1.5);
+        }
+
+        .next-section-bottom {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          padding-left: 7px;
+          padding-right: 7px;
+          border-radius: 5px;
+        }
+
+        .next-section-bottom:hover {
+          background-color: rgb(56, 56, 56);
+        }
+
+        .next-section-bottom:hover .next-left-play {
+          opacity: 1;
+        }
+
+        .next-section-bottom:hover .next-song-image {
+          filter: brightness(0.5);
+        }
+
+        .next-right {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          margin-left: 10px;
+
+        }
+
+
+        .lost-found {
+          font-weight: 600;
+          margin-bottom: 1px;
+          font-size: 16px;
+        }
+
+        .lost-found-artist {
+          color: rgb(175, 175, 175);
+          font-weight: 500;
+          font-size: 14px;
+          margin-top: 5px;
+        }
+
+        .next-section-left {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .next-section-left img {
+          height: 50px;
+          width: 50px;
+          border-radius: 5px;
+        }
+
+        .next-left-play {
+          position: absolute;
+          left: 10px;
+          top: 10px;
+          opacity: 0;
+        }

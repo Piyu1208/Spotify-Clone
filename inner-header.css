@@ -1,0 +1,193 @@
+        .header-inside {
+          height: 90px;
+          background-color: rgb(31, 30, 30);
+          position: fixed;
+          top: 60px;
+          left: 1px;
+          right: 1163.5px;
+          border-radius: 6px 6px 0 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;  
+          align-items: center;
+          padding-bottom: 10px;
+          min-width: 350px;
+          z-index: 7;
+        }
+
+        .upper-part {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          width: 330px
+        }
+
+        .expand-library {
+          width: 16px;
+          height: 16px;
+        }
+
+        .upper-part-right {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .bottom-part {
+          display: flex;
+          align-items: center;
+          width: 330px;
+        }
+
+        .text-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        .text-container p {
+          color: white;
+          font-family: Arial;
+          font-weight: bold;
+          font-size: 14px;
+        }
+
+        .playlists-btn-container {
+          display: flex;
+          justify-content: center;
+        }
+
+        .playlists-btn {
+          background-color: rgb(62, 62, 62);
+          border: none;
+          color: white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          height: 30px;
+          width: 80px;
+          margin-right: 10px;
+          font-weight: bold;
+          transition: 0.25 ease-in-out;
+        }
+
+        .playlists-btn:hover {
+          filter: brightness(1.1);
+        }
+
+
+        .artists-btn-container {
+          display: flex;
+          justify-content: center;
+        }
+
+        .artists-btn {
+          background-color: rgb(62, 62, 62);
+          border: none;
+          color: white;
+          padding: 5px 10px;
+          border-radius: 20px;
+          height: 30px;
+          width: 70px;
+          font-weight: bold;
+          transition: 0.25s ease-in-out;
+        }
+
+        .artists-btn:hover {
+          filter: brightness(1.1);
+        }
+
+        .create-playlist-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-right: 10px;
+          position: relative;
+        }
+
+        .create-playlist-btn {
+          background-color: rgb(62, 62, 62);
+          border: none;
+          color: white;
+          font-weight: bold;
+          padding: 5px 10px;
+          border-radius: 20px;
+          height: 30px;
+          width: 90px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          transition: 0.25s ease-in-out;
+        }
+
+        .create-playlist-btn span {
+          font-weight: lighter;
+          font-size: 30px;
+          color: rgb(202, 202, 202);
+          margin-right: 5px;
+        }
+
+        .create-playlist-popup {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          position: absolute;
+          background-color: rgb(62, 62, 62);
+          color: white;
+          font-family: Arial;
+          font-size: 14px;
+          padding: 5px 10px;
+          width: 190px;
+          top: -50px;
+          transition: 0.25s ease-in-out;
+          height: 20px;
+          border-radius: 6px;
+          opacity: 0;
+          pointer-events: none;
+        }
+
+        .create-playlist-container:hover .create-playlist-popup {
+          opacity: 1;
+        }
+
+        .create-playlist-btn:hover {
+          background-color: rgb(86, 86, 86);
+        }
+          
+
+        .expand-library-container {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-left: 10px;
+          height: 30px;
+          width: 30px;
+          border-radius: 50%;
+          position: relative;
+        }
+
+        .expand-library-popup {
+          position: absolute;
+          top: -45px;
+          left: -10;
+          background-color: rgb(62, 62, 62);
+          color: white;
+          padding: 5px;
+          border-radius: 5px;
+          font-family: Arial;
+          font-size: 14px;
+          width: 140px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          opacity: 0;
+          pointer-events: none;
+          transition: 0.25s ease-in-out;
+        }
+
+        .expand-library-container:hover .expand-library-popup {
+          opacity: 1;
+        }
+
+        .expand-library-container:hover {
+          background-color: rgb(62, 62, 62);
+        }

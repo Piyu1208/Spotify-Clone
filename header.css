@@ -1,0 +1,440 @@
+  
+
+      header {
+        display: flex;
+        background-color: black;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 60px;
+        align-items: center;  
+        z-index: 6;
+      }
+
+      .logo{
+        background-color: black;
+        height: 30px;
+        width: 30px;
+      }
+
+      .home-icon {
+        height: 20px;
+        width: 20px;
+      }
+
+      .home-btn {
+        background-color: #2d2d2d;
+        border: none;
+        height: 40px;
+        width: 40px;
+        border-radius: 20px;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-right: 10px;
+        transition: 0.25s ease-in-out; 
+      }
+
+      .home-btn:hover {
+        transform: scale(1.025);
+        background-color: #3e3e3e;
+      }
+
+      .home-btn:hover .pop-home {
+        opacity: 1;
+      }
+
+
+
+      .pop-home {
+        position: fixed;
+        top: 50px;
+        background-color: #2d2d2d;
+        color: white;
+        font-weight: bold;
+        padding: 5px 3px;
+        border-radius: 3px;
+        opacity: 0;
+        pointer-events: none;
+        transition: 0.25s ease-in-out;
+        box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .middle-section {
+        display: flex;
+        align-items: center;
+        margin-left: 400px;
+        flex: 1;
+        z-index: 1;
+      }
+
+      .left-section {
+        width: 80px;
+        display: flex;
+        justify-content: center;
+        flex-shrink: 0;
+      }
+
+      .premium-btn-container {
+        display: inline-block;
+        width: 140px;
+        height: 30px;
+      }
+
+
+
+      .premium-btn {
+        background-color: white;
+        border: none;
+        height: 100%;
+        width: 100%;
+        border-radius: 20px;
+        font-weight: bold;
+        display: inline-block;
+        transition: 0.25 ease-in-out;
+      }
+
+      .premium-btn-container:hover {
+        transform: scale(1.05);
+        filter: brightness(0.9)
+      }
+
+      .install-icon {
+        height: 18px;
+        width: 18px;
+        margin-right: 5px;
+      }
+
+      .install-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 30px;
+        color: rgb(195, 195, 195);
+        background-color: black;
+        border: none;
+        font-weight: bold;
+        transition: 0.25 ease-in-out;
+      }
+
+      .install-btn:hover {
+        filter: brightness(1.5);
+        transform: scale(1.05);
+      }
+
+
+      .bell-icon, .friends-icon {
+        height: 16px;
+        width: 16px;
+      }
+
+      .bell-btn, .friends-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: black;
+        border: none;
+        transition: 0.25 ease-in-out;
+      }
+
+      .bell-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        
+      }
+
+      .bell-popup {
+        color: white;
+        font-family: arial;
+        position: absolute;
+        background-color: rgb(47, 47, 47);
+        height: 19px;
+        width: 80px;
+        font-weight: bold;
+        padding: 3px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        left: -30px;
+        bottom: -35px;
+        pointer-events: none;
+        transition: 0.25s ease-in-out;
+        opacity: 0;
+      }
+
+      .bell-container:hover .bell-popup {
+        opacity: 1;
+      }
+
+      .bell-container:hover .bell-btn {
+        transform: scale(1.025);
+        filter: brightness(1.5);
+      }
+
+
+      .friends-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        
+      }
+
+      .friends-popup {
+        color: white;
+        font-family: arial;
+        position: absolute;
+        background-color: rgb(47, 47, 47);
+        height: 19px;
+        width: 100px;
+        font-weight: bold;
+        padding: 3px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        left: -40px;
+        bottom: -40px;
+        pointer-events: none;
+        transition: 0.25s ease-in-out;
+        opacity: 0;
+      }
+
+      .friends-container:hover .friends-popup {
+        opacity: 1;
+      }
+
+      .friends-container:hover .friends-btn {
+        transform: scale(1.025);
+        filter: brightness(1.5);
+      }
+
+      
+
+
+
+      .pp-icon {
+        height: 35px;
+        width: 35px;
+        border-radius: 17.5px;
+      }
+
+      .pp-btn {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 45px;
+        width: 45px;
+        border-radius: 22.5px;
+        border: none;
+        background-color: #2d2d2d;
+        transition: 0.25 ease-in-out;
+      }
+
+      .pp-btn:hover {
+        transform: scale(1.05);
+      }
+
+      .pp-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        transition: 0.25 ease-in-out;
+      }
+
+      .pp-popup {
+        color: white;
+        font-family: arial;
+        position: absolute;
+        background-color: rgb(47, 47, 47);
+        height: 17px;
+        width: 30px;
+        font-weight: bold;
+        padding: 3px;
+        border-radius: 3px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 13px;
+        left: 2px;
+        bottom: -30px;
+        pointer-events: none;
+        transition: 0.25s ease-in-out;
+        opacity: 0;
+      }
+
+      .pp-container:hover .pp-popup {
+        opacity: 1;
+      }
+
+
+
+
+      .search-icon {
+        height: 25px;
+        width: 25px;
+      }
+
+      .search-icon-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #2d2d2d;
+        height: 44px;
+        width: 44px;
+        border-top-left-radius: 22px;
+        border-bottom-left-radius: 22px;
+      }
+
+      .pop-search {
+        position: fixed;
+        font-family: "Seogoe UI", Arial;
+        top: 61px;
+        background-color: #2d2d2d;
+        color: white;
+        font-weight: 500;
+        padding: 5px 3px;
+        border-radius: 3px;
+        opacity: 0;
+        pointer-events: none;
+        font-size: 14px;
+        transition: 0.25s ease-in-out;
+        box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .search-icon {
+        transition: 0.25s ease-in-out;
+      }
+
+      .search-icon-container:hover .search-icon {
+        filter: brightness(1.5);
+      }
+
+      .search-icon-container:hover .pop-search {
+        opacity: 1;
+      }
+
+      .browse-icon {
+        height: 25px;
+        width: 25px;
+        padding: 5px;
+        padding-left: 10px;
+        border-left-style: solid;
+        border-color: rgb(151, 151, 151);
+        border-width: 1px;
+        transition: 0.125s ease-in-out;
+      }
+
+      .browse-icon:hover {
+        transform: scale(1.025);
+        filter: brightness(1.5);
+      }
+
+      .browse-btn {
+        background-color: #2d2d2d;
+        border: none;
+        height: 44px;
+        width: 60px;
+        border-top-right-radius: 22px;
+        border-bottom-right-radius: 22px;
+        display: flex;
+        align-items: center;
+      }
+
+      .pop-browse {
+        position: fixed;
+        font-family: "Seogoe UI", Arial;
+        top: 52px;
+        background-color: #2d2d2d;
+        color: white;
+        font-weight: 500;
+        padding: 5px 3px;
+        border-radius: 3px;
+        opacity: 0;
+        pointer-events: none;
+        font-size: 12px;
+        transition: 0.25s ease-in-out;
+        box-shadow: 0 7px 5px rgba(0, 0, 0, 0.3);
+      }
+
+      .browse-btn:hover .pop-browse {
+        opacity: 1;
+      }
+
+      .search-form {
+        flex: 1;
+        min-width: 400px;
+        background-color: black;
+      }
+
+      .searchbar {
+        height: 42px;
+        width: 100%;
+        border: none;
+        background-color: #2d2d2d;
+        font-weight: 500;
+      }
+
+
+
+
+      .searchbar::placeholder {
+        color: rgb(200, 200, 200);
+        font-size: 15px;
+      }
+
+      .search-container {
+        display: flex;
+        align-items: center;
+      }
+
+     
+
+
+
+
+      .right-section {
+        width: 400px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-shrink: 0;
+        position: relative;
+        right: 3px; 
+        background-color: black;        
+      }
+
+
+      @media (max-width: 1400px) {
+        .middle-section {
+          margin-left: 0px;
+        }        
+      }
+
+      @media (max-width: 1054px){
+        .premium-btn {
+          display: none;
+        }
+      }
+
+      @media (max-width: 895px){
+        .search-form {
+          min-width: 240px;
+        }
+      }
+
+      @media (max-width: 697px){
+        .right-section {
+          position: static;
+          margin-left: -150px;
+  
+        }
+      }

@@ -1,0 +1,852 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>
+      Spotify Clone
+    </title>
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="bottom-header.css">
+    <link rel="stylesheet" href="inner-header.css">
+    <link rel="stylesheet" href="your-library.css">
+    <link rel="stylesheet" href="current-music.css">
+    <link rel="stylesheet" href="middle-section.css">
+      <style>
+
+        html, body {
+          margin: 0;
+          padding:  30px 0 40px 0;
+          min-width: 100%;
+          height: 85svh;
+        }
+
+
+        body {
+          display: flex;
+          font-family: Arial;
+          background-color: black;
+        }
+
+        ::-webkit-scrollbar {
+          width: 13px;
+        } 
+
+        ::-webkit-scrollbar-track {
+          background: rgb(31, 30, 30);
+        }
+
+        ::-webkit-scrollbar-thumb {
+          background: rgb(31, 30, 30);
+          margin: 0px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+          background: rgb(103, 102, 102);
+        }
+          
+
+        section {
+          overflow: auto;
+          max-height: 100%;
+        }
+
+
+
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+
+        
+
+
+
+
+
+        
+
+        
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+      </style>
+  </head>
+
+  <body>
+    <header>
+      <div class="left-section">
+        <img class="logo" src="images/logo.png">
+      </div>
+      
+      <div class="middle-section">
+        <button class="home-btn">
+          <img class="home-icon" src="images/home.png">
+          <div class="pop-home">Home</div>
+        </button>
+        
+        <div class="search-container">
+          <div class="search-icon-container">
+            <img class="search-icon" src="images/search.png">
+            <div class="pop-search">Search</div>
+          </div>
+          <form class="search-form">
+            <input class="searchbar" type="input" placeholder="What do you want to play?">
+          </form>
+          
+          <button class="browse-btn">
+            <img class="browse-icon" src="images/svgexport-6.png">
+            <div class="pop-browse">Browse</div>
+          </button>
+        </div>
+        
+      </div>
+      <div class="right-section">
+        <div class="premium-btn-container">
+          <button class="premium-btn">Explore Premium</button>
+        </div>
+        
+        <button class="install-btn">
+          <img class="install-icon" src="images/download.png">
+          <p class="install-line">Install App</p>
+        </button>
+        <div class="bell-container">
+        <button class="bell-btn">
+          <img class="bell-icon" src="images/notifications.png">
+        </button>
+        <div class="bell-popup">What's New</div>
+        </div>
+        <div class="friends-container">
+        <button class="friends-btn">
+          <img class="friends-icon" src="images/friends.png">
+        </button>
+        <div class="friends-popup">Friend Activity</div>
+        </div>
+        <div class="pp-container">
+        <button class="pp-btn">
+          <img class="pp-icon" src="images/pp.jpg">
+        </button>
+        <div class="pp-popup">You</div>
+        </div>
+
+      </div>
+    </header>
+
+
+    <div class="bottom-header">
+      <div class="btm-left">
+        <img class="current-music-pp" src="images/sakura_2.jpg">
+        <div class="current-music-text">
+          <p class="top">The Breeze and The Wildflower</p>
+          <p class="bottom">Roasting Coffee Beans</p>
+        </div>
+        <div class="add-to-like-container">
+          <img class="add-to-like-songs" src="images/svgexport-44.png">
+          <div class="like-popup">Add to Liked Songs</div>
+        </div>
+        
+      </div>
+      <div class="btm-middle">
+        <div class="tp">
+          <div class="shuffle">
+            <img src="images/svgexport-17.png">
+            <div class="shuffle-popup">Disable Shuffle</div>
+          </div>
+          <div class="previous">
+            <img src="images/svgexport-18.png">
+            <div class="previous-popup">Previous</div>
+          </div>
+          
+          
+          <div class="play-circle">
+            <img src="images/svgexport-31.png">
+            <div class="play-popup">Play</div>
+          </div>
+          <div class="next">
+            <img src="images/svgexport-20.png">
+            <div class="next-popup">Next</div>
+          </div>
+          <div class="enable-repeat">
+            <img src="images/svgexport-21.png">
+            <div class="enable-repeat-popup">Enable Repeat</div>
+          </div>
+          
+        </div>
+        <div class="bt">
+          <p>0:00</p>
+          <div class="bt-line-container">
+            <div class="line"></div>
+            <div class="line-popup"></div>
+          </div>
+          
+          <p>2:56</p>
+          
+        </div>
+      </div>
+      <div class="btm-right">
+        <div class="btm-right-left">
+          <div class="now-playing-view">
+            <img src="images/svgexport-22.png">
+            <div class="now-playing-view-popup">Now Playing View</div>
+          </div>
+          <div class="lyrics">
+            <img src="images/svgexport-23.png">
+            <div class="lyrics-popup">Lyrics</div>
+          </div>
+          <div class="queue">
+            <img src="images/svgexport-24.png">
+            <div class="queue-popup">Queue</div>
+          </div>
+          <div class="connect-to-device">
+            <img src="images/svgexport-25.png">
+            <div class="connect-to-device-popup">Connect to a device</div>
+          </div>
+          
+          
+          
+        </div>
+        <div class="vol">
+          <div class="mute">
+            <img src="images/svgexport-26.png">
+            <div class="mute-popup">Mute</div>
+          </div>
+          <div class="vol-bar-container">
+            <div class="vol-bar"></div>
+            <div class="vol-popup"></div>
+          </div>
+          
+          
+        </div>
+        <div class="open-miniplayer">
+          <img src="images/svgexport-27.png">
+          <div class="open-miniplayer-popup">Open Miniplayer</div>
+        </div>
+        <div class="enter-fullscreen">
+          <img src="images/svgexport-28.png">
+          <div class="enter-fullscreen-popup">Enter Full screen</div>
+        </div>
+        
+        
+      </div>
+
+    </div>
+
+
+    <div class="header-inside">
+      <div class="upper-part">
+        <div class="text-container">
+          <p>Your Library</p>
+        </div>
+        <div class="upper-part-right">
+          <div class="create-playlist-container">
+            <button class="create-playlist-btn"><span>&#43</span> Create</button>
+            <p class="create-playlist-popup">Create a playlist, folder or jam</p>
+          </div>
+          <div class="expand-library-container">
+            <img class="expand-library" src="images/svgexport-42.png">
+            <p class="expand-library-popup">Expand Your Library</p>
+          </div>
+        </div>
+
+      </div>
+      <div class="bottom-part">
+        <div class="playlists-btn-container">
+          <button class="playlists-btn">Playlists</button>
+        </div>
+        <div class="artists-btn-container">
+          <button class="artists-btn">Artists</button>
+        </div>
+      </div>
+
+
+      
+
+    </div>
+
+    
+    <section class="your-library">
+      <div class="your-library-top">
+        <div class="search-in-library-container">
+          <div class="search-in-library">
+            <img class="search-in-library-icon" src="images/search.png">
+          </div>
+          <div class="syl-popup">Search in Your Library</div>
+        </div>
+
+        <div class="text-and-icon">
+          <p>Recents</p>
+          <img src="images/svgexport-16.png">
+        </div>
+      </div>
+
+      <div class="playlists-container-container">
+        
+        <div class="like-playlist">
+          <div class="like-playlist-icon-container">
+            <img class="like-playlist-icon" src="images/like.png">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-liked-playlist-popup">Play Liked Songs</div>
+          </div>
+          <div class="like-playlist-text">
+            <p class="like-playlist-name">Liked Songs</p>
+            <p class="like-playlist-count">Playlist <span>&#183</span> 43 songs</p>
+        </div>
+        </div>
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/drunk cat.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 1</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 1</p>
+            <p class="playlist-count">Playlist <span>&#183</span> spotify</p>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/764e2ffb-87ac-4b0c-b3af-182b21392b9a.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 2</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 2</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/0c67711f-fd13-435d-98f1-a0f00b1eb86c.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 3</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 3</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/384714cc-1ad6-43b4-9274-b132505e8913.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 4</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 4</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/cat.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 5</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 5</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/a5c79eb2-5279-4daa-900f-2287723a84e9.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 6</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 6</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/d69e7dfb-3782-4651-9f5a-936d86fae998.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 7</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 7</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/no__.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 8</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 8</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/e5cbf9da-e0a4-42e5-9a5c-4845b8340f98.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 9</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 9</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/4562a10f-7523-4ab8-9d0b-c59190119c58.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 10</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 10</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/a1382ab5-c4a8-4bdf-b140-f6c066e15d6b.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 11</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 11</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/945a9c31-55ae-4266-9214-2a4dff7240ce.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 12</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 12</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+        <div class="playlist">
+          <div class="playlist-icon-container">
+            <img class="playlist-icon" src="images/thugLok on TikTok.jpg">
+            <img class="play-hover" src="images/playhover.png">
+            <div class="play-playlist-1-popup">Play Playlist 13</div>
+          </div>
+          <div class="playlist-text">
+            <p class="playlist-name">Playlist 13</p>
+            <p class="playlist-count">Playlist <span>&#183</span> You</p>
+          </div>
+        </div>
+
+    </section>
+
+
+    <div class="middle-header">
+      <button class="all-btn">All</button>
+      <button class="music-button">Music</button>
+      <button class="podcasts-btn">Podcasts</button>
+    </div>
+
+
+    <section class="middle">
+      <div class="middle-2nd-section">
+        <div class="middle-playlist">
+          <img src="images/thugLok on TikTok.jpg">
+          <div>Playlist 13</div>
+          <div class="middle-playlist-play-popup">
+            <img src="images/svgexport-31.png" style="height: 20px; width: 20px;">
+          </div>
+        </div>
+
+        <div class="middle-playlist">
+          <img src="images/thugLok on TikTok.jpg">
+          <div>Playlist 1</div>
+          <div class="middle-playlist-play-popup">
+            <img src="images/svgexport-31.png" style="height: 20px; width: 20px;">
+          </div>
+        </div>
+
+        <div class="middle-playlist">
+          <img src="images/drunk cat.jpg">
+          <div>Playlist 1</div>
+          <div class="middle-playlist-play-popup">
+            <img src="images/svgexport-31.png" style="height: 20px; width: 20px;">
+          </div>
+        </div>
+
+        <div class="middle-playlist">
+          <img src="images/764e2ffb-87ac-4b0c-b3af-182b21392b9a.jpg">
+          <div>Playlist 2</div>
+          <div class="middle-playlist-play-popup">
+            <img src="images/svgexport-31.png" style="height: 20px; width: 20px;">
+          </div>
+        </div>
+
+        <div class="middle-playlist">
+          <img src="images/e5cbf9da-e0a4-42e5-9a5c-4845b8340f98.jpg">
+          <div>Playlist 9</div>
+          <div class="middle-playlist-play-popup">
+            <img src="images/svgexport-31.png" style="height: 20px; width: 20px;">
+          </div>
+        </div>
+
+        <div class="middle-playlist">
+          <img src="images/cat.jpg">
+          <div>Playlist 5</div>
+          <div class="middle-playlist-play-popup">
+            <img src="images/svgexport-31.png" style="height: 20px; width: 20px;">
+          </div>
+        </div>
+
+        <div class="middle-playlist">
+          <img src="images/384714cc-1ad6-43b4-9274-b132505e8913.jpg">
+          <div>Playlist 4</div>
+          <div class="middle-playlist-play-popup">
+            <img src="images/svgexport-31.png" style="height: 20px; width: 20px;">
+          </div>
+        </div>
+
+        <div class="middle-playlist">
+          <img src="images/no__.jpg">
+          <div>Playlist 8</div>
+          <div class="middle-playlist-play-popup">
+            <img src="images/svgexport-31.png" style="height: 20px; width: 20px;">
+          </div>
+        </div>
+      </div>
+
+      <div class="horizontal-section-1-name">
+        <div class="left-1">
+          <div class="made-for">Made For</div>
+          <div class="you">You</div>
+        </div>
+        <div class="right-1">Show all</div>
+      </div>
+
+
+      <div class="horizontal-section-1">
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/i have a lot to learn.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class="daily-mix-top">Daily Mix</div>
+          <div class="daily-mix-no">01</div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/a6e06c9d-68f9-4c3a-8841-70d0885d98dd.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class="daily-mix-top" style="background-color: yellow;">Daily Mix</div>
+          <div class="daily-mix-no" style="background-color: yellow;">02</div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/download.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class="daily-mix-top" style="background-color: red;">Daily Mix</div>
+          <div class="daily-mix-no" style="background-color: red;">03</div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+        
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/meow.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class="daily-mix-top" style="background-color: rgb(217, 77, 233);">Daily Mix</div>
+          <div class="daily-mix-no" style="background-color: rgb(217, 77, 233);">04</div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/6be261e2-b7e1-443b-b2ed-6018a4b0a726.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class="daily-mix-top" style="background-color: rgb(233, 165, 77);">Daily Mix</div>
+          <div class="daily-mix-no" style="background-color: rgb(233, 165, 77);">05</div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>  
+        </div>     
+          
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/945a9c31-55ae-4266-9214-2a4dff7240ce.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class="daily-mix-top" style="background-color: rgb(168, 233, 77);">Daily Mix</div>
+          <div class="daily-mix-no" style="background-color: rgb(168, 233, 77);">06</div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div> 
+        </div>
+
+      </div>
+
+
+
+
+      <div class="horizontal-section-2-name" >
+        <div class="left-1" style="margin-top: 13px;">
+          <div class="you">Recently played</div>
+        </div>
+        <div class="right-1">Show all</div>
+      </div>
+
+      <div class="horizontal-section-2">
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/i have a lot to learn.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/a6e06c9d-68f9-4c3a-8841-70d0885d98dd.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/a6e06c9d-68f9-4c3a-8841-70d0885d98dd.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/a6e06c9d-68f9-4c3a-8841-70d0885d98dd.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/a6e06c9d-68f9-4c3a-8841-70d0885d98dd.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+      </div>
+
+
+      <div class="horizontal-section-3-name" >
+        <div class="left-1" style="margin-top: 13px;">
+          <div class="you">Jump back in</div>
+        </div>
+        <div class="right-1">Show all</div>
+      </div>
+
+      <div class="horizontal-section-3">
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/i have a lot to learn.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/a6e06c9d-68f9-4c3a-8841-70d0885d98dd.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/a6e06c9d-68f9-4c3a-8841-70d0885d98dd.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/a6e06c9d-68f9-4c3a-8841-70d0885d98dd.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+        <div class="daily-mix">
+          <img class="daily-mix-icon" src="images/a6e06c9d-68f9-4c3a-8841-70d0885d98dd.jpg">
+          <div class="daily-mix-text">
+            Random artists, singer and more
+          </div>
+          <div class=" daily-mix-popup">
+            <img src="images/svgexport-31.png">
+          </div>          
+        </div>
+
+      </div>
+
+
+
+
+      
+
+    </section>
+
+    <div class="current-music-header">
+      <div class="current-music-playlist">Playlist 13</div>
+        <div class="current-music-options">
+          <div class="more-options">
+            <img src="images/svgexport-36.png">
+            <div class="more-options-popup">More options for Roasting Coffee Beans</div>
+          </div>
+          <div class="expand-view">
+            <img src="images/svgexport-42.png">
+            <div class="expand-view-popup">Exapnd Now Playing view</div>
+          </div>
+        </div>
+      </div>
+    <section class="current-music">
+      <div class="current-music-photo-container">
+        <img class="current-music-photo" src="images/sakura_2.jpg">
+      </div>
+      <div class="title-section">
+        <div class="title-left-section">
+          <p class="current-music-title">The Breeze and The Wildflower</p>
+          <p class="current-music-artist">Roasting Coffee Beans</p>
+        </div>
+        <div class="title-right-section">
+          <div class="container-container-container">
+          <div class="current-music-copy-link-container">
+            <img class="current-music-copy-link" src="images/svgexport-50.png">
+            <div class="current-music-copy-link-popup">Copy Link to Song</div>
+          </div>
+          </div>
+
+          <div class="current-music-like-container">
+            <img class="current-music-like" src="images/svgexport-44.png">
+            <div class="current-music-like-popup">Add to playlist</div>
+          </div>
+      </div>
+      </div>
+
+      <div class="credits-section">
+        <div class="credits-section-top">
+          <p class="credits-text">Credits</p>
+          <p class="showall-text">Show all</p>
+        </div>
+        <div class="credits-section-middle">
+          <div class="middle-left">
+            <p class="middle-coffee-beans">Roasting Coffee Beans</p>
+            <p class="coffee-beans-title">Main Artist</p>
+          </div>
+          <div class="middle-right">
+            <button>Follow</button>
+          </div>
+        </div>
+        <div class="credits-section-bottom">
+          <p class="composer-name">Emma Jackson</p>
+          <p class="composer">Composer</p>
+        </div>
+      </div>
+
+      <div class="next-section">
+        <div class="next-section-top">
+          <p class="next-in-q-text">Next in queue</p>
+          <p class="open-q-text">Open queue</p>
+        </div>
+        <div class="next-section-bottom">
+          <div class="next-section-left">
+            <img class="next-song-image" src="images/1d7f3161-22f6-42ac-b592-8b3ba8dd133d.jpg">
+            <img class="next-left-play" src="images/playhover.png" style="height: 30px; width: 30px;">
+          </div>
+          <div class="next-right">
+            <p class="lost-found">Lost and Found</p>
+            <p class="lost-found-artist">Roasting Coffee Beans</p>
+          </div>
+        </div>
+      </div>
+
+      
+
+    </section>
+    
+
+
+  </body>
+</html>
